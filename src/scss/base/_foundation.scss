@@ -45,16 +45,6 @@ $grid-cols: 12;
     --font-header: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-// For syncing JavaScript and CSS media queries
-#breakpoint-sync {
-    font-weight: 100;
-
-    @include breakpoint-min(sm) { font-weight: 200; }
-    @include breakpoint-min(md) { font-weight: 300; }
-    @include breakpoint-min(lg) { font-weight: 400; }
-    @include breakpoint-min(xl) { font-weight: 500; }
-}
-
 html {
     box-sizing: border-box;
     -ms-text-size-adjust: 100%;
