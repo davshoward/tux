@@ -1,0 +1,1 @@
+console.log("vendor.js has loaded");

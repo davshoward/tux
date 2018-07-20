@@ -1,0 +1,9 @@
+{
+	"setting": {
+		"url": "",
+		"imageurl": "/social.png",
+		"googleplus": "[googleplus username goes here]",
+		"facebookapp": "[facebookapp id goes here]",
+		"twitterid": "[twitter id goes here]"
+	}
+}

@@ -1,0 +1,99 @@
+// ==========================================================================
+//   Grid.
+// ==========================================================================
+
+%container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// **************************************************************************
+// Legacy grid
+//
+
+// Container
+.container {
+    @extend %container;
+    padding-left: var(--grid-gutter);
+    padding-right: var(--grid-gutter);
+
+    @each $grid-breakpoints, $max-width in $container-widths {
+        @include breakpoint-min($grid-breakpoints) {
+            max-width: $max-width;
+        }
+    }
+}
+
+.container-fluid {
+    @extend %container;
+}
+
+// Row
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--grid-gutter) / -2);
+    margin-right: calc(var(--grid-gutter) / -2);
+}
+
+.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+%col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+	padding-left: calc(var(--grid-gutter) / 2);
+    padding-right: calc(var(--grid-gutter) / 2);
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .col, 
+    [class*="col-"] {
+        @extend %col;
+    }
+
+    @include breakpoint-min($breakpoint) {
+        .col#{$infix} {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        .col#{$infix}-auto {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
+        }
+
+        @for $i from 1 through $grid-cols {
+            .col#{$infix}-#{$i} {
+                flex: 0 0 percentage($i / $grid-cols);
+                max-width: percentage($i / $grid-cols);
+            }
+        }
+
+        @for $i from 1 through $grid-cols {
+            .offset#{$infix}-#{$i} {
+                margin-left: percentage($i / $grid-cols);
+            }
+        }
+
+        @for $i from 1 through $grid-cols {
+            .order#{$infix}-#{$i} {
+                order: $i;
+            }
+        }
+    }
+}

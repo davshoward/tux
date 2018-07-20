@@ -1,0 +1,33 @@
+// ==========================================================================
+//   Images.
+// ==========================================================================
+
+img {
+    &.aligncenter {
+        clear: both;
+        margin-bottom: var(--base-padding);
+    }
+
+    &.alignleft {
+        margin-right: var(--base-padding);
+    }
+
+    &.alignright {
+        margin-left: var(--base-padding);
+    }
+}
+
+.figure {
+    display: inline-block;
+
+    img {
+        margin-bottom: var(--base-padding);
+        line-height: 1;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    figcaption {
+        font-size: 0.875rem;
+    }
+}

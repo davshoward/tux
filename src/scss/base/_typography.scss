@@ -1,0 +1,134 @@
+// ==============================================================
+//   Typography.
+// ==============================================================
+
+// Reset
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+	color: var(--font-color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Header
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: var(--base-padding);
+	font-family: var(--font-header);
+    font-weight: 700;
+    line-height: 1.2;
+	color: var(--main-color);
+
+    &[id]:not(:first-child) {
+        margin-top: var(--base-padding);
+    }
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+}
+
+h3, .h3 {
+    font-size: 1.75rem;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+}
+
+h5, .h5 {
+    font-size: 1.25rem ;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+// Type
+p, ul, ol {
+    font-size: 1rem;
+    margin-bottom: var(--base-padding);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+ul,
+ol {
+    padding-left: var(--base-padding);
+
+    ul,
+    ol {
+        margin-bottom: var(--base-padding);
+        padding-left: var(--base-padding);
+    }
+}
+
+blockquote {
+    width: 100%;
+    padding: var(--base-padding);
+    position: relative;
+
+    p {
+        font-size: 2rem;
+        font-family: var(--font-header);
+    }
+
+    cite {
+        display: block;
+        font-size: 1rem;
+        font-family: var(--font-header);
+        text-align: right;
+    }
+}
+
+address {
+	margin: 0 0 var(--base-padding);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--main-color);
+    margin: var(--base-padding) 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: var(--base-padding);
+}
+
+abbr[title] {
+    text-decoration: none;
+    border-bottom: 2px dashed var(--white);
+}
+
+del {
+    color: var(--base-red);
+}
+
+ins {
+    color: var(--base-green);
+}
+
+mark {
+    background-color: var(--base-yellow);
+}
