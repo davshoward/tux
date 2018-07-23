@@ -1,4 +1,4 @@
-# Tux 🤵
+![Tux](/logo.jpg)
 
 A baseline toolkit to ease the building of static HTML sites or templated CMS builds. Using Webpack 4, Gulp, PostCSS, Nunjunks and BrowserSync.
 
@@ -35,3 +35,9 @@ npm start
 ```bash
 npm run build
 ```
+
+#### Configure
+Customise your own file paths within gulpfile.js/config.js
+
+## Contributing
+Welcome any improvements or suggestions :-)
