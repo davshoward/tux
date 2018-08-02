@@ -26,7 +26,7 @@ const stylesTask = () => {
 		.pipe(sass(tasks.styles.sass))
 		.on('error', handleErrors)
 		.pipe(postcss(postCssOptions))
-		.pipe(gulpif(env.prod, cssnano(config.styles.cssnano)))
+		.pipe(gulpif(env.prod, cssnano({autoprefixer: false})))
 		.pipe(gulpif(!env.prod, sourcemaps.write('./')))
 		.pipe(gulp.dest(paths.dest))
 		.pipe(browserSync.stream());

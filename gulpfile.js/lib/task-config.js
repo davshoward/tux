@@ -19,11 +19,8 @@ module.exports = {
 
 	styles: {
 		autoprefixer: {
-			browsers: ['> 1%', 'last 2 versions']
-		},
-		cssnano: {
-			safe: true,
-			autoprefixer: false
+            browsers: ['> 1%', 'last 2 versions', 'ie 11', 'ios >= 7', 'android >= 5', 'safari >= 9'],
+            grid: true
 		},
 		ext: ['sass', 'scss', 'css'],
 		sass: {},
