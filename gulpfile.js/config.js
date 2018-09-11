@@ -13,7 +13,7 @@ module.exports = {
 	},
 
 	styles: {
-		src: 'scss',
+		src: 'css',
 		dest: 'styles'
 	},
 

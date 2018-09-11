@@ -4,7 +4,7 @@ A baseline toolkit to ease the building of static HTML sites or templated CMS bu
 
 ## Features 💪 
 * HTML - Build templates with Nunjucks 
-* CSS - SCSS syntax and PostCSS-cssnext - "Use tomorrow’s CSS syntax, today" including autoprefixing and fallbacks
+* CSS - PostCSS with autoprefixing, nesting, custom media queries and more - "Use tomorrow’s CSS syntax, today"
 * JS - Bundle and transpile ES6 JavaScript with Webpack and Babel
 * Assets - Automatically optimise images, manage fonts and static assets
 * Development - Live reload with BrowserSync and Webpack's HMR. 
@@ -17,7 +17,7 @@ A baseline toolkit to ease the building of static HTML sites or templated CMS bu
 ### Off you go
 #### Clone
 ```bash
-git clone https://github.com/davshoward/sparklemuffin <my-project-name>
+git clone https://github.com/davshoward/tux <my-project-name>
 cd <my-project-name>
 ```
 

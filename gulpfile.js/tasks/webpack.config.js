@@ -55,7 +55,7 @@ const webpackConfig = {
 				exclude: path.resolve(__dirname, 'node_modules/'),
 				loader: 'babel-loader',
 				query: {
-					presets: [['env', { modules: false }]]
+					presets: ['@babel/preset-env']
 				}
 			}
 		]
