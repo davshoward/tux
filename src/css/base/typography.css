@@ -1,0 +1,48 @@
+// ==============================================================
+//   Typography.
+// ==============================================================
+
+// Header
+h1, h2, h3, h4, h5, h6 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: var(--base-padding);
+	font-family: var(--font-header);
+    font-weight: 700;
+    line-height: 1.2;
+	color: var(--main-color);
+
+    &[id]:not(:first-child) {
+        margin-top: var(--base-padding);
+    }
+}
+
+// Type
+a {
+    color: var(--main-color);
+}
+
+p, ul, ol {
+    font-size: var(--font-size);
+    margin-bottom: var(--base-padding);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+ul,
+ol {
+    padding-left: var(--base-padding);
+
+    ul,
+    ol {
+        margin-bottom: var(--base-padding);
+        padding-left: var(--base-padding);
+    }
+}

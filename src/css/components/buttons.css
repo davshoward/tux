@@ -3,6 +3,7 @@
 // ==========================================================================
 
 .button {
+    width: 100%;
     appearance: none;
     display: inline-block;
     font-weight: 500;
@@ -10,18 +11,28 @@
     vertical-align: middle;
     white-space: normal;
     margin: 0;
-    padding: 0.675rem;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-size: var(-font-size);
     line-height: 1.5;
     border: 1px solid transparent;
     border-radius: 0;
+    background-color: var(--main-color);
+    color: white;
     transition: background-color 0.2s ease;
+
+    @media (--sm) {
+        width: auto;
+    }
 
     &,
     &:hover,
     &:focus {
         text-decoration: none;
         outline: none;
+    }
+
+    &:hover:not([disabled]):not(.is-disabled) {
+        background-color: var(--accent-color);;
     }
 
     &:active {
@@ -32,22 +43,5 @@
     &[disabled] {
         cursor: not-allowed;
         opacity: 0.45;
-    }
-}
-
-// CSS element name; main color; hover color; font color
-$buttons: (
-    "main" var(--main-color) var(--main-color) var(--white),
-    "accent" var(--accent-color) var(--accent-color) var(--white) 
-);
-
-@each $i in $buttons {
-    .button--#{nth($i, 1)} {
-        background-color: nth($i, 2);
-        color: nth($i, 4);
-
-        &:hover:not([disabled]):not(.is-disabled) {
-            background-color: nth($i, 3);
-        }
     }
 }

@@ -1,0 +1,29 @@
+@custom-media --sm (width >= 38em);
+@custom-media --md (width >= 48em);
+@custom-media --lg (width >= 70em);
+@custom-media --xl (width >= 90em);
+
+:root {
+    --grid-gutter: 1.875rem;
+
+    --base-padding: 1.5rem;
+    --double-padding: 3rem;
+    --triple-padding: 4.5rem;
+
+    --main-color: rebeccapurple;
+    --accent-color: orange;
+
+    --font-color: #333333;
+    --font-size: 1rem;
+    --font-base: system-ui;
+    --font-header: system-ui;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--font-color);
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    overflow-wrap: break-word;  
+}

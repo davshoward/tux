@@ -2,49 +2,6 @@
 //   The Foundation.
 // ==========================================================================
 
-// Breakpoints
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 1120px,
-    xl: 1640px
-);
-
-// Container width
-$container-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 1080px,
-    xl: 1520px
-);
-
-// Grid
-$grid-cols: 12;
-
-:root {
-    --grid-gutter: 1.875rem;
-
-    --base-padding: 1.5rem;
-    --double-padding: 3rem;
-    --triple-padding: 4.5rem;
-
-    --main-color: rebeccapurple;
-    --accent-color: orange;
-
-    --white: #FFFFFF;
-    --black: #000000;
-
-    --font-color: #333333;
-    --base-green: #4caf50;
-    --base-yellow: #ffeb3b;
-    --base-blue: #2196f3;
-    --base-red: #f44336;
-
-    --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-header: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
 html {
     box-sizing: border-box;
     -ms-text-size-adjust: 100%;
@@ -60,6 +17,11 @@ html {
     &::after {
         box-sizing: inherit;
     }
+}
+
+.layout-svgs {
+    position: absolute;
+    left: -300%;
 }
 
 // Shim for "new" HTML5 structural elements to display correctly
@@ -193,4 +155,29 @@ svg:not(:root) {
 
 [hidden] {
     display: none !important;
+}
+
+// Hide only visually, but have it available for screenreaders
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
+    &.focusable{
+        &:active,
+        &:focus {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+    }
 }
