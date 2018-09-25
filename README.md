@@ -41,3 +41,12 @@ Customise your own file paths within gulpfile.js/config.js
 
 ## Contributing
 Welcome any improvements or suggestions :-)
+
+## Changelog
+
+### 1.1.0
+* Fully migrate from SASS to PostCSS
+* Updated dependencies
+
+### 1.0.0
+* Initial commit
