@@ -17,6 +17,8 @@
     --font-size: 1rem;
     --font-base: system-ui;
     --font-header: system-ui;
+
+    --outline-color: lightgreen;
 }
 
 body {

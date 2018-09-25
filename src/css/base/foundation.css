@@ -149,8 +149,19 @@ svg:not(:root) {
     border: 0;
 }
 
-:focus {
-    outline: 0;
+// Remove outline for non-keyboard :focus
+*:focus:not(.focus-visible) {
+	outline: none;
+}
+
+// Style for outline when using keyboard (uses focus-visibile dependency)
+.focus-visible {
+	box-shadow: 0 0 0 2px var(--outline-color);
+}
+
+// No JS fallback for focus-visible
+.no-js *:focus {
+	box-shadow: 0 0 0 2px var(--outline-color);
 }
 
 [hidden] {
