@@ -44,6 +44,9 @@ Welcome any improvements or suggestions :-)
 
 ## Changelog
 
+### 1.1.1
+* Added focus-visible usage for better baseline accessibility
+
 ### 1.1.0
 * Fully migrate from SASS to PostCSS
 * Updated dependencies
