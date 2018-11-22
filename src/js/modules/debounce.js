@@ -1,17 +1,33 @@
-function debounce(func, wait = 20, immediate = true) {
+/**
+ * Debounce functions for better performance
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Function} fn The function to debounce
+ */
+var debounce = function (fn) {
+
+	// Setup a timer
 	var timeout;
-	return function() {
-		var context = this,
-			args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-}
+
+	// Return a function to run debounced
+	return function () {
+
+		// Setup the arguments
+		var context = this;
+		var args = arguments;
+
+		// If there's a timer, cancel it
+		if (timeout) {
+			window.cancelAnimationFrame(timeout);
+		}
+
+		// Setup the new requestAnimationFrame()
+		timeout = window.requestAnimationFrame(function () {
+			fn.apply(this, args);
+		});
+
+	}
+
+};
+
 
 module.exports = debounce;
