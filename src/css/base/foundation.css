@@ -2,193 +2,237 @@
 //   The Foundation.
 // ==========================================================================
 
-html {
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -ms-overflow-style: scrollbar;
-}
+// Display resets
 
-// Prevents margin and border from affecting element width.
 * {
-    &,
-    &::before,
-    &::after {
-        box-sizing: inherit;
-    }
+	margin: 0;
+	padding: 0;
+
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
 }
 
-.layout-svgs {
-    position: absolute;
-    left: -300%;
-}
-
-// Shim for "new" HTML5 structural elements to display correctly
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
-}
-
-// Make viewport responsive
-// @link - https://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design
-@-ms-viewport {
-    width: device-width;
+html {
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+		Noto Sans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-overflow-style: scrollbar;
+	word-break: break-word;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+	min-height: 100vh;
+	color: var(--font-color);
+	font-family: var(--font-base);
+	font-size: 1rem;
+	overflow-wrap: break-word;
+	scroll-behavior: smooth;
 }
 
-// Remove default spacing and border for appropriate elements.
-h1, h2, h3, h4, p, blockquote, figure, ol, ul, ol ol, ul ul, ol, ul, ul ol, dl, dt, dd, pre {
-    margin: 0;
-    padding: 0;
+main {
+	display: block;
 }
 
-b, strong {
-    font-weight: bold;
+hr {
+	height: 0;
+	overflow: visible;
+}
+
+nav ol,
+nav ul {
+	list-style: none;
+}
+
+[hidden],
+.hidden {
+	display: none !important;
+}
+
+// Typography
+
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
+}
+
+::-moz-selection,
+::selection {
+	background-color: var(--selection-color);
+	color: var(--font-color);
+	text-shadow: none;
+}
+
+// Images
+
+img {
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+	border-style: none;
+}
+
+// Forms
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+}
+
+button,
+input,
+select {
+	overflow: visible;
 }
 
 button {
-    background: transparent;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    -webkit-font-smoothing: inherit;
-    letter-spacing: inherit;
-
-    // Fix for transparent `button` backgrounds in Firefox/IE.
-    &::focus {
-        outline: 1px dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-    }
+	background: transparent;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	-webkit-font-smoothing: inherit;
+	letter-spacing: inherit;
 }
 
-// iOS "clickable elements" fix for role="button"
-// @link - https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-[role="button"] {
-    cursor: pointer;
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
 }
 
-button, input, select, textarea {
-    font: inherit;
-}
-
-button, input, select {
-    overflow: visible;
-    margin: 0;
+input {
+	overflow: visible;
 }
 
 textarea {
-    resize: vertical;
-    overflow: auto;
+	resize: vertical;
+	overflow: auto;
 }
 
-// Click delay optimization for touch
-// @link - http://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
-a, area, button, [role="button"], input, label, select, summary, textarea {
-    touch-action: manipulation;
-}
-
-a,
-button {
-    color: var(--main-color);
-}
-
-a {
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-iframe {
-    border: 0;
-}
-
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-// Credit: https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
-[tabindex="-1"]:focus {
-    outline: none !important;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    display: inline-block;
-    vertical-align: middle;
-    border: 0;
-    border-style: none;
-}
-
-// Hide the overflow in IE.
-svg:not(:root) {
-    overflow: hidden;
+select {
+	text-transform: none;
 }
 
 ::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+	border-style: none;
+	padding: 0;
 }
 
-// Remove outline for non-keyboard :focus
-*:focus:not(.focus-visible) {
-	outline: none;
+// Tables
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-// Style for outline when using keyboard (uses focus-visibile dependency)
-.focus-visible {
-	box-shadow: 0 0 0 2px var(--outline-color);
+// Embeded content
+
+audio,
+canvas,
+iframe,
+svg,
+video {
+	vertical-align: middle;
 }
 
-// No JS fallback for focus-visible
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+svg:not([fill]) {
+	fill: currentColor;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+.layout-svgs {
+	position: absolute;
+	left: -300%;
+}
+
+// Scripting
+
+canvas {
+	display: inline-block;
+}
+
+template {
+	display: none;
+}
+
+// Interaction
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
+
+// Accessibility
+
+[aria-busy='true'] {
+	cursor: progress;
+}
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+[aria-disabled='true'],
+[disabled] {
+	cursor: not-allowed;
+}
+
+[aria-hidden='false'][hidden]:not(:focus) {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+}
+
 .no-js *:focus {
 	box-shadow: 0 0 0 2px var(--outline-color);
 }
 
-[hidden] {
-    display: none !important;
+*:focus:not(.focus-visible) {
+	outline: none;
 }
 
-// Hide only visually, but have it available for screenreaders
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-
-    // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
-    &.focusable{
-        &:active,
-        &:focus {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: static;
-            width: auto;
-        }
-    }
+.focus-visible {
+	box-shadow: 0 0 0 2px var(--outline-color);
 }
