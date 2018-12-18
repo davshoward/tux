@@ -2,34 +2,70 @@
 //   Typography.
 // ==============================================================
 
-// Header
-h1, h2, h3, h4, h5, h6 {
-    display: inline-block;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: var(--base-padding);
+h1 {
+	--heading-min-size: 2;
+	--heading-max-size: 2.5;
+	font-size: 2rem;
+}
+
+h2 {
+	--heading-min-size: 1.75;
+	--heading-max-size: 2;
+	font-size: 1.75rem;
+}
+
+h3 {
+	--heading-min-size: 1.4;
+	--heading-max-size: 1.6;
+	font-size: 1.4rem;
+}
+
+h4 {
+	--heading-min-size: 1.2;
+	--heading-max-size: 1.4;
+	font-size: 1.2rem;
+}
+
+h5 {
+	--heading-min-size: 1;
+	--heading-max-size: 1.2;
+	font-size: 1rem;
+}
+
+h6 {
+	--heading-min-size: 1;
+	--heading-max-size: 1.2;
+	font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: inline-block;
+	width: 100%;
+	color: var(--color-main);
+	font-size: calc(
+		(var(--heading-min-size) * 1rem) +
+			(var(--heading-max-size) - var(--heading-min-size)) *
+			(100vw - (var(--fluid-type-min-width) * 1rem)) /
+			(var(--fluid-type-max-width) - var(--fluid-type-min-width))
+	);
 	font-family: var(--font-header);
-    font-weight: 700;
-    line-height: 1.2;
-	color: var(--main-color);
-
-    &[id]:not(:first-child) {
-        margin-top: var(--base-padding);
-    }
+	line-height: 1.2;
 }
 
-// Type
 a {
-    color: var(--main-color);
+	color: var(--main-color);
 }
 
-p, ul, ol {
-    font-size: var(--font-size);
-    margin-bottom: var(--base-padding);
-
-	&:last-child {
-		margin-bottom: 0;
-	}
+p,
+ul,
+ol {
+    font-size: 1rem;
+    line-height: 1.4;
 
 	&:empty {
 		display: none;
@@ -38,11 +74,16 @@ p, ul, ol {
 
 ul,
 ol {
-    padding-left: var(--base-padding);
+	padding-left: var(--base-padding);
 
-    ul,
-    ol {
-        margin-bottom: var(--base-padding);
-        padding-left: var(--base-padding);
-    }
+	ul,
+	ol {
+		padding-left: var(--base-padding);
+	}
+}
+
+blockquote {
+    position: relative;
+    font-style: italic;
+    padding-left: var(--base-padding);
 }

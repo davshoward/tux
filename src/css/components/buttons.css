@@ -12,13 +12,13 @@
     white-space: normal;
     margin: 0;
     padding: 1rem 2rem;
-    font-size: var(-font-size);
+    font-size: 1rem;
     line-height: 1.5;
     border: 1px solid transparent;
     border-radius: 0;
     background-color: var(--main-color);
     color: white;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease-in;
 
     @media (--sm) {
         width: auto;
@@ -32,7 +32,7 @@
     }
 
     &:hover:not([disabled]):not(.is-disabled) {
-        background-color: var(--accent-color);;
+        background-color: var(--accent-color);
     }
 
     &:active {
