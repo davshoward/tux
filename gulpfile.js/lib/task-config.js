@@ -35,7 +35,7 @@ module.exports = {
 		htmlmin: {
 			collapseWhitespace: true
 		},
-		excludeFolders: ['layouts', 'components', 'macros', 'data'],
+		excludeFolders: ['templates', 'components', 'macros', 'data'],
 		ext: ['html', 'njk', 'json']
 	},
 
