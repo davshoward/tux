@@ -3,7 +3,10 @@ module.exports = {
 		files: [],
 		server: {
 			baseDir: 'public',
-			middleware: []
+			middleware: [],
+			serveStaticOptions: {
+				extensions: ['html']
+			}
 		},
 		watchOptions: {
 			debounceDelay: 2000
