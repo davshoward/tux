@@ -1,13 +1,15 @@
 <!-- index.njk -->
-{% extends 'layouts/main.njk' %}
+{% extends 'templates/main.njk' %} 
 
-{% set page_title = "Tux 🤵" %}
-{% set page_description = "" %}
-{% set page_slug = "" %}
-{%set body_classes = "page-homepage" %}
+{% set page_title = "Tux 🤵" %} 
+{% set page_description = "A baseline toolkit to ease the building of static HTML sites or templated CMS builds. Using Webpack 4, Gulp, PostCSS, Nunjunks and BrowserSync." %} 
+{% set page_slug = "" %} 
+{%set body_classes = "page-homepage" %}  
 
 {% block main %}
-<div style="height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; background-color: rebeccapurple">
-    <h1 style="text-align: center; color: white; margin: 0">Tux</h1>
+<div
+	style="height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; background-color: rebeccapurple"
+>
+	<h1 style="text-align: center; color: white; margin: 0">Tux 🤵</h1>
 </div>
 {% endblock %}
