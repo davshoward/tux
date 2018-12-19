@@ -44,6 +44,13 @@ Welcome any improvements or suggestions :-)
 
 ## Changelog
 
+### 1.2.0
+* Updated foundation css
+* Introduce spacing rhythm and fluid headers
+* Allow urls to not require .html
+* Added css-to-JS breakpoint sync
+* Updated dependencies - including adding postcss color-mod
+
 ### 1.1.1
 * Added focus-visible usage for better baseline accessibility
 

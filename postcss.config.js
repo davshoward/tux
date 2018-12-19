@@ -5,7 +5,7 @@ module.exports = {
 			stage: 1
 		}),
 		require('postcss-nested'),
-		require('autoprefixer')
+		require('postcss-color-mod-function')
 	],
 	parser: require('postcss-scss') // For inline comments
 };
