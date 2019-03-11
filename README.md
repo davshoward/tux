@@ -44,6 +44,11 @@ Welcome any improvements or suggestions :-)
 
 ## Changelog
 
+### 1.2.1
+* Added JS-free FOUC fix
+* Minor CSS update
+* Remove Aria role=document (from PR #1)
+
 ### 1.2.0
 * Updated foundation css
 * Introduce spacing rhythm and fluid headers

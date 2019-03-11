@@ -1,6 +1,6 @@
 {
 	"name": "tux",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "A baseline toolkit to ease the building of static HTML sites or templated CMS builds.",
 	"license": "MIT",
 	"author": "Davs Howard <@davshoward> (https://davshoward.com)",
