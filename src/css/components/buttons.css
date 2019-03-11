@@ -31,7 +31,7 @@
         outline: none;
     }
 
-    &:hover:not([disabled]):not(.is-disabled) {
+    &:hover:not([disabled]) {
         background-color: var(--accent-color);
     }
 
@@ -39,7 +39,6 @@
         top: 1px;
     }
 
-    &.is-disabled,
     &[disabled] {
         cursor: not-allowed;
         opacity: 0.45;
