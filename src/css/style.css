@@ -11,3 +11,9 @@
 @import "components/images.css";
 
 @import 'base/print.css';
+
+// Resolve FOUC
+html {
+    visibility: visible;
+    opacity: 1;
+}
