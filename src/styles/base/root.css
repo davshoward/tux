@@ -1,0 +1,31 @@
+@custom-media --sm (width >= 25em);
+@custom-media --md (width >= 48em);
+@custom-media --lg (width >= 70em);
+@custom-media --xl (width >= 96em);
+@custom-media --xxl (width >= 120em);
+
+:root {
+	--rhythm-sm: 0.625rem;
+	--rhythm-md: 1.25rem;
+	--rhythm-lg: 2.5rem;
+	--rhythm-xl: 3.75rem;
+	--rhythm-xxl: 5rem;
+
+	--fluid-type-min-width: 40;
+	--fluid-type-max-width: 60;
+
+	--transition-smooth: cubic-bezier(0.765, 0, 0.175, 1);
+
+	--font-base: system-ui;
+	--font-header: system-ui;
+
+	--color-purple-500: rebeccapurple;
+	--color-orange-500: orange;
+
+	--font-color: #333333;
+	--heading-color: white;
+	--link-color: white;
+
+	--outline-color: lightgreen;
+	--selection-color: lightgreen;
+}

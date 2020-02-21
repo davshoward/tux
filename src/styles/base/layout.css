@@ -1,0 +1,55 @@
+body::before {
+	content: "xs";
+	display: none;
+	visibility: hidden;
+
+	@media (--sm) {
+		content: "sm";
+	}
+	@media (--md) {
+		content: "md";
+	}
+	@media (--lg) {
+		content: "lg";
+	}
+	@media (--xl) {
+		content: "xl";
+	}
+}
+
+body,
+html {
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+.rhythm {
+	* + * {
+		margin-top: var(--rhythm-md);
+	}
+
+	li + li,
+	dt,
+	dd {
+		margin-top: 0.25rem;
+	}
+}
+
+.site-container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 var(--rhythm-md);
+	max-width: 36rem;
+
+	@media (--lg) {
+		max-width: 62rem;
+	}
+
+	@media (--xl) {
+		max-width: 68rem;
+	}
+}

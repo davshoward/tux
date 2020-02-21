@@ -1,9 +1,3 @@
-// ==========================================================================
-//   The Foundation.
-// ==========================================================================
-
-// Display resets
-
 * {
 	margin: 0;
 	padding: 0;
@@ -18,8 +12,8 @@
 html {
 	box-sizing: border-box;
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol', 'Noto Color Emoji';
+		Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -56,8 +50,6 @@ nav ul {
 	display: none !important;
 }
 
-// Typography
-
 a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
@@ -84,8 +76,6 @@ small {
 	text-shadow: none;
 }
 
-// Images
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -95,8 +85,6 @@ img {
 	border: 0;
 	border-style: none;
 }
-
-// Forms
 
 button,
 input,
@@ -122,9 +110,9 @@ button {
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
 	-webkit-appearance: button;
 }
 
@@ -146,14 +134,10 @@ select {
 	padding: 0;
 }
 
-// Tables
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-// Embeded content
 
 audio,
 canvas,
@@ -178,10 +162,8 @@ svg:not(:root) {
 
 .layout-svgs {
 	position: absolute;
-	left: -300%;
+	left: -200vw;
 }
-
-// Scripting
 
 canvas {
 	display: inline-block;
@@ -191,7 +173,6 @@ template {
 	display: none;
 }
 
-// Interaction
 a,
 area,
 button,
@@ -204,9 +185,7 @@ textarea,
 	touch-action: manipulation;
 }
 
-// Accessibility
-
-[aria-busy='true'] {
+[aria-busy="true"] {
 	cursor: progress;
 }
 
@@ -214,12 +193,12 @@ textarea,
 	cursor: pointer;
 }
 
-[aria-disabled='true'],
+[aria-disabled="true"],
 [disabled] {
 	cursor: not-allowed;
 }
 
-[aria-hidden='false'][hidden]:not(:focus) {
+[aria-hidden="false"][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
@@ -235,4 +214,14 @@ textarea,
 
 .focus-visible {
 	box-shadow: 0 0 0 2px var(--outline-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		scroll-behavior: auto;
+	}
+
+	* {
+		transition: none !important;
+	}
 }

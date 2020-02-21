@@ -1,13 +1,6 @@
-const gulp = require('gulp');
-const del = require('del');
-const config = require('../config');
+const del = require("del");
+const config = require("../config").dest;
 
-const cleanTask = () => {
-	const path = config.dest;
+const clean = () => del(config);
 
-	return del(path);
-};
-
-gulp.task('clean', cleanTask);
-
-module.exports = cleanTask;
+module.exports = clean;

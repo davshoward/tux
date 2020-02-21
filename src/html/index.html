@@ -1,12 +1,9 @@
 <!-- index.njk -->
-{% extends 'templates/main.njk' %} 
-
-{% set page_title = "Tux 🤵" %} 
-{% set page_description = "A baseline toolkit to ease the building of static HTML sites or templated CMS builds. Using Webpack 4, Gulp, PostCSS, Nunjunks and BrowserSync." %} 
-{% set page_slug = "" %} 
-{%set body_classes = "page-homepage" %}  
-
-{% block main %}
+{% extends 'layout/main.njk' %} {% set page_title = "Tux 🤵" %} {% set
+page_description = "A baseline toolkit to ease the building of static HTML sites
+or templated CMS builds. Using Webpack 4, Gulp, PostCSS, Nunjunks and
+BrowserSync." %} {% set page_slug = "" %} {%set body_classes = "page-homepage"
+%} {% block main %}
 <div
 	style="height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; background-color: rebeccapurple"
 >

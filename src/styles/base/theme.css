@@ -1,0 +1,5 @@
+.background-white {
+	background: white;
+	--heading-color: var(--color-purple-500);
+	--link-color: var(--color-purple-500);
+}

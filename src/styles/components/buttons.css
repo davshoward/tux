@@ -1,0 +1,42 @@
+.button {
+	position: relative;
+	appearance: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	white-space: normal;
+	margin: 0;
+	padding: var(--rhythm-sm) var(--rhythm-md);
+	font-size: 1rem;
+	line-height: 1.2;
+	border: 1px solid transparent;
+	background-color: var(--color-purple-500);
+	color: white;
+	cursor: pointer;
+
+	&,
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:hover:not([disabled]) {
+		border-color: white;
+	}
+
+	&:active {
+		top: 1px;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.45;
+	}
+
+	.icon {
+		color: inherit;
+		margin-left: var(--rhythm-sm);
+	}
+}

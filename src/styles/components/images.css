@@ -1,0 +1,34 @@
+.image-background,
+.image-contain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	&.compat-object-fit {
+		background-position: center center;
+		background-size: cover;
+
+		img {
+			display: none;
+		}
+	}
+
+	img {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.image-contain {
+	&.compat-object-fit {
+		background-size: contain;
+	}
+
+	img {
+		object-fit: contain;
+	}
+}

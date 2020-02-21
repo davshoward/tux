@@ -3,14 +3,12 @@
  * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Function} fn The function to debounce
  */
-var debounce = function (fn) {
-
+export const debounce = function(fn) {
 	// Setup a timer
 	var timeout;
 
 	// Return a function to run debounced
-	return function () {
-
+	return function() {
 		// Setup the arguments
 		var context = this;
 		var args = arguments;
@@ -21,13 +19,8 @@ var debounce = function (fn) {
 		}
 
 		// Setup the new requestAnimationFrame()
-		timeout = window.requestAnimationFrame(function () {
-			fn.apply(this, args);
+		timeout = window.requestAnimationFrame(function() {
+			fn.apply(context, args);
 		});
-
-	}
-
+	};
 };
-
-
-module.exports = debounce;
