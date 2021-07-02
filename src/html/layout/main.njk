@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
-		<!-- Required meta tags -->
 		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Title -->
 		<title>{{ page_title }}</title>
 
-		<!-- Core Meta Data -->
+		<script type="module">
+			document.documentElement.classList.remove('no-js');
+			document.documentElement.classList.add('js');
+		</script>
+
 		<meta name="description" content="{{ page_description }}" />
-		<link rel="canonical" href="{{ setting.url }}/{{ page_slug }}" />
-
-		<!-- Schema.org markup -->
-		<meta itemprop="name" content="{{ page_title }}" />
-		<meta itemprop="description" content="{{ page_description }}" />
-		<meta itemprop="image" content="{{ setting.imageurl }}" />
-
-		<!-- Open Graph Meta Data -->
-		<meta property="fb:app_id" content="{{ setting.facebookapp }}" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="{{ page_title }}" />
 		<meta property="og:description" content="{{ page_description }}" />
 		<meta property="og:image" content="{{ setting.imageurl }}" />
-
-		<!-- Twitter Card Meta Data -->
+		<meta property="og:image:alt" content="{{ setting.imagealt }}" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="{{ setting.twitterid }}" />
-		<meta name="twitter:title" content="{{ page_title }}" />
-		<meta name="twitter:description" content="{{ page_description }}" />
-		<meta name="twitter:image" content="{{ setting.imageurl }}" />
+		<meta
+			property="og:og:url"
+			content="{{ setting.url }}/{{ page_slug }}"
+		/>
+		<link rel="canonical" href="{{ setting.url }}/{{ page_slug }}" />
 
-		<!-- Favicons -->
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="/favicon.png" />
+		<link rel="manifest" href="/my.webmanifest" />
+		<meta name="theme-color" content="" />
 
-		<!-- Disable automatic detection and formatting of possible phone numbers -->
 		<meta name="format-detection" content="telephone=no" />
+		<meta name="twitter:dnt" content="on" />
 
-		<!-- WebFonts -->
 		<!--<link href="" rel="preload" />-->
 
-		<!-- Resolve FOUC -->
 		<style>
 			html {
 				visibility: hidden;
 				opacity: 0;
 			}
 		</style>
-
-		<!-- CSS -->
 		<link rel="stylesheet" href="/styles/style.css" />
 	</head>
 
@@ -74,7 +60,7 @@
 			</header>
 
 			<!-- Main -->
-			<main id="main" class="main rhythm">
+			<main id="main" class="main flow">
 				{% block main %} {% endblock %}
 			</main>
 

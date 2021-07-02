@@ -1,19 +1,19 @@
 body::before {
-	content: "xs";
+	content: 'xs';
 	display: none;
 	visibility: hidden;
 
 	@media (--sm) {
-		content: "sm";
+		content: 'sm';
 	}
 	@media (--md) {
-		content: "md";
+		content: 'md';
 	}
 	@media (--lg) {
-		content: "lg";
+		content: 'lg';
 	}
 	@media (--xl) {
-		content: "xl";
+		content: 'xl';
 	}
 }
 
@@ -23,15 +23,21 @@ html {
 	overflow-x: hidden;
 }
 
-.rhythm {
+.flow {
 	* + * {
-		margin-top: var(--rhythm-md);
+		margin-top: var(--flow-md);
 	}
 
+	*:not(:--heading) + :--heading:not(.no-bump) {
+		margin-top: var(--flow-lg);
+	}
+
+	ul ul,
+	ol ol,
 	li + li,
 	dt,
 	dd {
-		margin-top: 0.25rem;
+		margin-top: var(--flow-xs);
 	}
 }
 
@@ -42,7 +48,7 @@ html {
 
 .container {
 	margin: 0 auto;
-	padding: 0 var(--rhythm-md);
+	padding: 0 var(--flow-md);
 	max-width: 36rem;
 
 	@media (--lg) {

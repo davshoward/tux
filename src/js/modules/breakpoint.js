@@ -3,7 +3,7 @@ export const breakpoint = () => {
 	let breakpoint;
 
 	// Get the current breakpoint
-	const getBreakpoint = function() {
+	const getBreakpoint = function () {
 		return window
 			.getComputedStyle(document.body, ':before')
 			.content.replace(/\"/g, '');

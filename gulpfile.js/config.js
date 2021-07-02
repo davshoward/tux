@@ -1,20 +1,20 @@
-const webpack = require("webpack");
-const glob = require("glob");
-const path = require("path");
-const env = require("./lib/env");
+const webpack = require('webpack');
+const glob = require('glob');
+const path = require('path');
+const env = require('./lib/env');
 
-const src = "src";
-const dest = "public";
+const src = 'src';
+const dest = 'public';
 
 const assets = [
 	{
-		src: `${src}/fonts/**`,
-		dest: `${dest}/fonts`
+		src: `${src}/fonts/*`,
+		dest: `${dest}/fonts`,
 	},
 	{
-		src: `${src}/static/**`,
-		dest: `${dest}/`
-	}
+		src: `${src}/static/*`,
+		dest: `${dest}/`,
+	},
 ];
 
 const server = {
@@ -23,12 +23,12 @@ const server = {
 		baseDir: dest,
 		middleware: [],
 		serveStaticOptions: {
-			extensions: ["html"]
-		}
+			extensions: ['html'],
+		},
 	},
 	watchOptions: {
-		debounceDelay: 2000
-	}
+		debounceDelay: 2000,
+	},
 };
 
 const html = {
@@ -38,51 +38,53 @@ const html = {
 	render: {
 		path: `${src}/html`,
 		envOptions: {
-			watch: false
-		}
+			watch: false,
+		},
 	},
 	htmlmin: {
-		collapseWhitespace: true
+		collapseWhitespace: true,
 	},
-	excludeFolders: ["layout", "components", "macros"],
-	ext: ["html", "njk", "json"]
+	excludeFolders: ['layout', 'components', 'macros'],
+	ext: ['html', 'njk', 'json'],
 };
 
 const images = {
-	src: `${src}/images/**`,
-	dest: `${dest}/images`,
-	ext: ["jpg", "png", "svg", "gif", "webp"],
-	watch: `${src}/images/**`
+	src: `${src}/images/*`,
+	dest: `${dest}/`,
+	watch: `${src}/images/*`,
+	ext: ['jpg', 'png', 'svg', 'gif', 'webp'],
 };
 
 const styles = {
 	src: `${src}/styles/*.css`,
 	dest: `${dest}/styles`,
-	watch: `${src}/styles/**/*.css`
+	watch: `${src}/styles/**/*.css`,
 };
 
 const scripts = {
 	src: `${src}/js/**`,
 	dest: `${dest}/js`,
 	webpack: {
-		mode: env.prod ? "production" : "development",
+		mode: env.prod ? 'production' : 'development',
 		context: path.resolve(__dirname, `../${src}/js`),
 		entry: {
 			main: !env.prod
-				? ["webpack-hot-middleware/client?reload=true", "./main.js"]
-				: ["./main.js"],
-			vendor: glob.sync(path.resolve(__dirname, `../${src}/js/vendor/**/*.js`))
+				? ['webpack-hot-middleware/client?reload=true', './main.js']
+				: ['./main.js'],
+			vendor: glob.sync(
+				path.resolve(__dirname, `../${src}/js/vendor/**/*.js`)
+			),
 		},
 		output: {
 			path: path.resolve(__dirname, `../${dest}/js`),
-			filename: "[name].bundle.js",
-			publicPath: "/js"
+			filename: '[name].bundle.js',
+			publicPath: '/js',
 		},
 		resolve: {
 			alias: {
 				utils: `${src}/js/utils`,
-				modules: `${src}/js/modules`
-			}
+				modules: `${src}/js/modules`,
+			},
 		},
 		plugins: !env.prod ? [new webpack.HotModuleReplacementPlugin()] : [],
 		module: {
@@ -90,15 +92,15 @@ const scripts = {
 				{
 					test: /\.js$/,
 					exclude: /node_modules/,
-					use: ["babel-loader"]
-				}
-			]
-		}
-	}
+					use: ['babel-loader'],
+				},
+			],
+		},
+	},
 };
 
 const report = {
-	src: [styles.dest, scripts.dest, images.dest]
+	src: [styles.dest, scripts.dest, images.dest],
 };
 
 module.exports = {
@@ -110,5 +112,5 @@ module.exports = {
 	html,
 	styles,
 	scripts,
-	report
+	report,
 };

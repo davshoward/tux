@@ -12,14 +12,15 @@
 html {
 	box-sizing: border-box;
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", "Noto Color Emoji";
+		Noto Sans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-ms-overflow-style: scrollbar;
 	word-break: break-word;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +29,6 @@ body {
 	font-family: var(--font-base);
 	font-size: 1rem;
 	overflow-wrap: break-word;
-	scroll-behavior: smooth;
 }
 
 main {
@@ -110,9 +110,9 @@ button {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
 	-webkit-appearance: button;
 }
 
@@ -185,7 +185,7 @@ textarea,
 	touch-action: manipulation;
 }
 
-[aria-busy="true"] {
+[aria-busy='true'] {
 	cursor: progress;
 }
 
@@ -193,12 +193,12 @@ textarea,
 	cursor: pointer;
 }
 
-[aria-disabled="true"],
+[aria-disabled='true'],
 [disabled] {
 	cursor: not-allowed;
 }
 
-[aria-hidden="false"][hidden]:not(:focus) {
+[aria-hidden='false'][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	display: inherit;
 	position: absolute;
@@ -217,7 +217,7 @@ textarea,
 }
 
 @media (prefers-reduced-motion: reduce) {
-	body {
+	html {
 		scroll-behavior: auto;
 	}
 

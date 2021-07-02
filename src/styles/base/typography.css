@@ -34,18 +34,7 @@ h6 {
 	font-size: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+:--heading {
 	display: inline-block;
 	width: 100%;
 	color: var(--heading-color);
@@ -76,16 +65,16 @@ ol {
 
 ul,
 ol {
-	padding-left: var(--rhythm-md);
+	padding-left: var(--flow-md);
 
 	ul,
 	ol {
-		padding-left: var(--rhythm-md);
+		padding-left: var(--flow-md);
 	}
 }
 
 blockquote {
 	position: relative;
 	font-style: italic;
-	padding-left: var(--rhythm-md);
+	padding-left: var(--flow-md);
 }
