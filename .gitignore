@@ -30,3 +30,5 @@ build
 dist
 site
 public
+
+package-lock.json

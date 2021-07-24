@@ -18,7 +18,7 @@ const imageminConfig = [
 ];
 
 const images = () =>
-	src(config.src)
+	src(`${config.src}.{${config.ext}}`)
 		.pipe(changed(config.dest))
 		.on('error', handleErrors)
 		.pipe(gulpif(env.prod, imagemin(imageminConfig)))

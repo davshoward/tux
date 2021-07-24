@@ -54,6 +54,10 @@ Welcome any improvements or suggestions :-)
 
 ## Changelog
 
+### 2.1.1
+
+-   Bug fix for images not copying correctly
+
 ### 2.1.0
 
 -   Updated all dependencies
