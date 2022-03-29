@@ -1,0 +1,20 @@
+:root {
+	--transition-ease: cubic-bezier(0.25, 0, 0.3, 1);
+	--transition-ease-in: cubic-bezier(0.7, 0, 1, 1);
+	--transition-ease-out: cubic-bezier(0, 0, 0.3, 1);
+	--transition-ease-in-out: cubic-bezier(0.5, 0, 0.5, 1);
+	--transition-smooth: cubic-bezier(0.765, 0, 0.175, 1);
+
+	--animation-fade-in: fade-in 0.5s var(--transition-ease);
+	--animation-fade-out: fade-out 0.5s var(--transition-ease);
+	--animation-scale-up: scale-up 0.5s var(--transition-ease);
+	--animation-scale-down: scale-down 0.5s var(--transition-ease);
+	--animation-slide-out-up: slide-out-up 0.5s var(--transition-ease);
+	--animation-slide-out-down: slide-out-down 0.5s var(--transition-ease);
+	--animation-slide-out-right: slide-out-right 0.5s var(--transition-ease);
+	--animation-slide-out-left: slide-out-left 0.5s var(--transition-ease);
+	--animation-slide-in-up: slide-in-up 0.5s var(--transition-ease);
+	--animation-slide-in-down: slide-in-down 0.5s var(--transition-ease);
+	--animation-slide-in-right: slide-in-right 0.5s var(--transition-ease);
+	--animation-slide-in-left: slide-in-left 0.5s var(--transition-ease);
+}

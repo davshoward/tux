@@ -1,20 +1,30 @@
 .button {
+	--button-color: white;
+	--button-background: var(--color-purple-500);
+
 	appearance: none;
 	position: relative;
+	min-width: 4rem;
+
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 6rem;
+	gap: var(--flow-sm);
+
+	font-size: var(--font-size-md);
+	font-family: inherit;
+	background-color: var(--button-background);
+	color: var(--button-color);
+
+	margin: 0;
+	padding-block: var(--flow-sm);
+	padding-inline: var(--flow-md);
+
 	text-align: center;
 	white-space: normal;
-	margin: 0;
-	padding: var(--flow-sm) var(--flow-md);
-	font-size: 1rem;
-	font-family: inherit;
+
 	border: 1px solid transparent;
-	background-color: var(--color-purple-500);
-	color: white;
-	transition: 0.2s ease-out;
+	transition: 0.2s var(--transition-ease);
 	cursor: pointer;
 
 	&,
@@ -25,7 +35,7 @@
 	}
 
 	&:hover:not([disabled]) {
-		border-color: white;
+		border-color: var(--button-color);
 	}
 
 	&:active {
@@ -35,10 +45,5 @@
 	&[disabled] {
 		cursor: not-allowed;
 		opacity: 0.45;
-	}
-
-	.icon {
-		color: inherit;
-		margin-left: var(--flow-sm);
 	}
 }

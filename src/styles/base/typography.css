@@ -1,62 +1,50 @@
-h1 {
-	--heading-min-size: 2;
-	--heading-max-size: 2.5;
-	font-size: 2rem;
-}
-
-h2 {
-	--heading-min-size: 1.75;
-	--heading-max-size: 2;
-	font-size: 1.75rem;
-}
-
-h3 {
-	--heading-min-size: 1.4;
-	--heading-max-size: 1.6;
-	font-size: 1.4rem;
-}
-
-h4 {
-	--heading-min-size: 1.2;
-	--heading-max-size: 1.4;
-	font-size: 1.2rem;
-}
-
-h5 {
-	--heading-min-size: 1;
-	--heading-max-size: 1.2;
-	font-size: 1rem;
-}
-
-h6 {
-	--heading-min-size: 1;
-	--heading-max-size: 1.2;
-	font-size: 1rem;
-}
-
 :--heading {
 	display: inline-block;
 	width: 100%;
 	color: var(--heading-color);
-	font-size: calc(
-		(var(--heading-min-size) * 1rem) +
-			(var(--heading-max-size) - var(--heading-min-size)) *
-			(100vw - (var(--fluid-type-min-width) * 1rem)) /
-			(var(--fluid-type-max-width) - var(--fluid-type-min-width))
-	);
 	font-family: var(--font-header);
 	line-height: 1.2;
 }
 
-a {
-	color: var(--link-color);
+h1,
+.h1 {
+	font-size: var(--font-size-2xl);
+}
+
+h2,
+.h2 {
+	font-size: var(--font-size-xl);
+}
+
+h3,
+.h3 {
+	font-size: var(--font-size-lg);
+}
+
+h4,
+.h4 {
+	font-size: var(--font-size-md);
+}
+
+h5,
+.h5 {
+	font-size: var(--font-size-sm);
+}
+
+h6,
+.h6 {
+	font-size: var(--font-size-xs);
+}
+
+a[href] {
+	color: var(--color-link);
 }
 
 p,
 ul,
 ol {
-	font-size: 1rem;
-	line-height: 1.4;
+	font-size: var(--font-size-md);
+	line-height: var(--font-lineheight-md);
 
 	&:empty {
 		display: none;

@@ -1,0 +1,20 @@
+:root {
+	--color-purple-500: rebeccapurple;
+	--color-orange-500: orange;
+
+	--color-neutral-900: #1c1c1c;
+	--color-neutral-800: #2d2d2d;
+	--color-neutral-700: #595959;
+	--color-neutral-600: #646464;
+	--color-neutral-500: #9e9e9e;
+	--color-neutral-400: #bbbbbb;
+	--color-neutral-300: #d8d8d8;
+	--color-neutral-200: #ececec;
+	--color-neutral-100: #f5f5f5;
+
+	--color-font: #333333;
+	--color-heading: white;
+	--color-link: white;
+	--color-outline: lightgreen;
+	--color-selection: lightgreen;
+}

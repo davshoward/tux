@@ -49,9 +49,9 @@ const html = {
 };
 
 const images = {
-	src: `${src}/images/*`,
+	src: `${src}/images/**/*`,
 	dest: `${dest}/`,
-	watch: `${src}/images/*`,
+	watch: `${src}/images/**/*`,
 	ext: ['jpg', 'png', 'svg', 'gif', 'webp'],
 };
 

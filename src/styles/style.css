@@ -1,4 +1,11 @@
-@import 'base/root.css';
+@import '_root/custom.css';
+@import '_root/flow.css';
+@import '_root/font.css';
+@import '_root/theme.css';
+@import '_root/animation.css';
+@import '_root/ratio.css';
+
+@import 'base/animation.css';
 @import 'base/foundation.css';
 @import 'base/helpers.css';
 @import 'base/typography.css';

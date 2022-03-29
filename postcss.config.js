@@ -5,6 +5,5 @@ module.exports = {
 			stage: 1,
 		}),
 		require('postcss-nested'),
-		require('postcss-color-mod-function'),
 	],
 };

@@ -15,6 +15,9 @@ body::before {
 	@media (--xl) {
 		content: 'xl';
 	}
+	@media (--2xl) {
+		content: '2xl';
+	}
 }
 
 body,
@@ -28,7 +31,7 @@ html {
 		margin-top: var(--flow-md);
 	}
 
-	*:not(:--heading) + :--heading:not(.no-bump) {
+	*:not(:--heading) + :--heading {
 		margin-top: var(--flow-lg);
 	}
 
@@ -56,6 +59,6 @@ html {
 	}
 
 	@media (--xl) {
-		max-width: 68rem;
+		max-width: 72rem;
 	}
 }
