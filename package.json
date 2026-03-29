@@ -52,7 +52,7 @@
 		"webpack": "^5.42.0",
 		"webpack-dev-middleware": "^5.0.0",
 		"webpack-hot-middleware": "^2.25.0",
-		"webpack-stream": "^6.1.2"
+		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
 		"focus-visible": "^5.2.0"
